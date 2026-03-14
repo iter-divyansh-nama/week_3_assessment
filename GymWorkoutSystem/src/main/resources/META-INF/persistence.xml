@@ -1,0 +1,26 @@
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+version="2.2">
+
+<persistence-unit name="gymPU">
+
+<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+
+<class>com.gym.entity.Member</class>
+<class>com.gym.entity.Workout</class>
+
+<properties>
+
+<property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/gymdb"/>
+<property name="javax.persistence.jdbc.user" value="root"/>
+<property name="javax.persistence.jdbc.password" value="bhavya@123"/>
+
+<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL8Dialect"/>
+<property name="hibernate.hbm2ddl.auto" value="update"/>
+<property name="hibernate.show_sql" value="true"/>
+
+</properties>
+
+</persistence-unit>
+
+</persistence>
